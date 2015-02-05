@@ -76,12 +76,12 @@ namespace TextAdventureCS
             }           
 
             // Make the player
-            Player player = new Player(name, 100);
+            Player player = new Player(name, 100, 1, 1);
             //Welcome the player
             Welcome(ref player);
 
             // Initialize the map
-            Map map = new Map(mapwidth, mapheight, xstartpos, ystartpos);
+            Map map = new Map(mapwidth, mapheight, xstartpos, ystartpos, ref player);
             // Put the locations with their items on the map
             InitMap(ref map);
             // Start the game
@@ -197,6 +197,7 @@ namespace TextAdventureCS
                             Console.ReadKey();
                             break;
                         case ACTION_STATS:
+                            player.HasBuff(player);
                             player.ShowStats(player);
                             Console.ReadKey();
                             break;

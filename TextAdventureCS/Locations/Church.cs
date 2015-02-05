@@ -11,6 +11,8 @@ namespace TextAdventureCS
             : base(name)
         {
             hasEnemy = true;
+            Item_Pickaxe pick = new Item_Pickaxe("Pickaxe", true);
+            items.Add(pick.GetName(), pick);
         }
 
         public override void Description()

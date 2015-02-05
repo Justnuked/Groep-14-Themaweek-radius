@@ -9,8 +9,8 @@ namespace TextAdventureCS
     {
         private Dictionary<string, Objects> inventory;
 
-        public Player(string name, int maxHealth)
-            : base(name, maxHealth)
+        public Player(string name, int maxHealth, int str, int armour)
+            : base(name, maxHealth, str, armour)
         {
             inventory = new Dictionary<string, Objects>();
         }
@@ -68,6 +68,11 @@ namespace TextAdventureCS
                 return true;
             else
                 return false;
+        }
+
+        public override int HasBuff(int str)
+        {
+            return str = 1;
         }
 
         public override void TakeHit( int damage )

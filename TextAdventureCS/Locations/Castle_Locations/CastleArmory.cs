@@ -11,6 +11,8 @@ namespace TextAdventureCS
             : base(name)
         {
             hasBossEnemy = true;
+            Key key = new Key("Key", true);
+            items.Add(key.GetName(), key);
         }
         public override void Description()
         {

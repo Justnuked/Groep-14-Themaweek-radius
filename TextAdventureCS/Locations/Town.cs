@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Town(string name)
             : base(name)
         {
+            Dagger dag = new Dagger("Dagger", true);
+            items.Add(dag.GetName(), dag);
             hasInn = true;
         }
 

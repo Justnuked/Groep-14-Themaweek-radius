@@ -13,6 +13,7 @@ namespace TextAdventureCS
 
         private Position pos;
         private Directions directions;
+        private Player player;
 
         private struct Position
         {
@@ -28,10 +29,11 @@ namespace TextAdventureCS
             public int west;
         }
 
-        public Map(int width, int height, int XStartPos, int YStartPos)
+        public Map(int width, int height, int XStartPos, int YStartPos, ref Player player)
         {
             this.width = width;
             this.height = height;
+            this.player = player;
 
             map = new Location[this.width, this.height];
             directions = new Directions();
@@ -164,6 +166,37 @@ namespace TextAdventureCS
                 directions.west = -1;
             else if (map[pos.Yposition, pos.Xposition - 1] == null)
                 directions.west = -1;
+
+            // tomb need key
+            if (pos.Yposition == 4 && pos.Xposition == 3)
+            {
+                directions.north = -1;
+                if (player.HasObject("Key") == true)
+                {
+                    Console.WriteLine("You unlocked the tomb.");
+                    directions.north = +1;
+                }
+                else
+                {
+                    Console.WriteLine("You need a key in order to enter the tomb.");
+                }
+            }
+           
+            //castle pickaxe need
+            if (pos.Yposition == 1 && pos.Xposition == 0)
+            {
+                directions.south = -1;
+                if (player.HasObject("Pickaxe") == true)
+                {
+                    Console.WriteLine("You destroy the barricade with the pickaxe.");
+                    directions.south = +1;
+                }
+                else
+                {
+                    Console.WriteLine("The entrance to the castle is barricaded.");
+                    Console.WriteLine("You need some kind of tool to destroy it.");
+                }
+            }
         }
 
         public Location GetLocation()

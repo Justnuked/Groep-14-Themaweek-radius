@@ -13,16 +13,18 @@ namespace TextAdventureCS
         protected int str;
         protected int armour;
         
-        public Actor( string name, int maxHealth )
+        public Actor( string name, int maxHealth, int str, int armour )
         {
             this.name = name;
             this.maxHealth = maxHealth;
             this.health = maxHealth;
-            this.str = 1;
-            this.armour = 1;
+            this.str = HasBuff(str);
+            this.armour = armour;
         }
 
-        public abstract void TakeHit(int damage);         
+        public abstract void TakeHit(int damage);
+
+        public abstract int HasBuff(int str);
 
         public string GetName()
         {
@@ -42,6 +44,16 @@ namespace TextAdventureCS
         public int SetHealth()
         {
            return health = maxHealth;           
+        }
+
+        public int HasBuff(Player player)
+        {
+            if (player.HasObject("Dagger") == true)
+            {
+                return player.str = 2;
+            }
+            else
+                return player.str = 1;
         }
     }
 }

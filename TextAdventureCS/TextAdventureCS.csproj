@@ -51,6 +51,7 @@
     <Compile Include="Items\Health Potion_Weak.cs" />
     <Compile Include="Items\Item_Diamond.cs" />
     <Compile Include="Items\Item_Key.cs" />
+    <Compile Include="Items\Item_Pickaxe.cs" />
     <Compile Include="Items\Item_Rope.cs" />
     <Compile Include="Items\Weapon_Axe.cs" />
     <Compile Include="Items\Weapon_Dagger.cs" />
