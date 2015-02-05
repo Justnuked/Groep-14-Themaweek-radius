@@ -10,11 +10,11 @@ namespace TextAdventureCS
         public TombHall(string name)
             : base(name)
         {
-            
+ 
         }
         public override void Description()
         {
-            Console.WriteLine("You are standing in the middle of a long, dark hallway.");
+            Console.WriteLine("You are standing in the middle of a gaint, ill lit room.");
         }
 
     }

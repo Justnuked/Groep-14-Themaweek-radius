@@ -38,13 +38,12 @@ namespace TextAdventureCS
         const string ACTION_INN = "Go to the inn";
         const string ACTION_INV = "Show inventory";
         const string ACTION_STATS = "Show stats";
-        const string ACTION_TREASURE = "Take the treasure";
 
         static void Main(string[] args)
         {
             // General initializations to prevent magic numbers
-            int mapwidth = 13;
-            int mapheight = 13;
+            int mapwidth = 12;
+            int mapheight = 12;
             int ystartpos = 2;
             int xstartpos = 2;
             
@@ -76,12 +75,12 @@ namespace TextAdventureCS
             }           
 
             // Make the player
-            Player player = new Player(name, 100);
+            Player player = new Player(name, 100, 1, 1);
             //Welcome the player
             Welcome(ref player);
 
             // Initialize the map
-            Map map = new Map(mapwidth, mapheight, xstartpos, ystartpos);
+            Map map = new Map(mapwidth, mapheight, xstartpos, ystartpos, ref player);
             // Put the locations with their items on the map
             InitMap(ref map);
             // Start the game
@@ -104,7 +103,7 @@ namespace TextAdventureCS
             Console.WriteLine();
 
             player.ShowInventory();
-            Console.WriteLine("You exit the Inn, located in the town of Mana");
+            Console.WriteLine("You exit the Inn, located in the town of (Skyrim)");
             Console.WriteLine("After asking around a little, you decide to start going.");
             Console.WriteLine("Press a key to continue..");
             Console.ReadKey();
@@ -113,59 +112,58 @@ namespace TextAdventureCS
         static void InitMap(ref Map map)
         {
             // Add locations with their coordinates to this list.
-            Forest forest = new Forest("Woodhearth");
+            Forest forest = new Forest("Black Forest");
             map.AddLocation(forest, 3, 2);
             map.AddLocation(forest, 4, 2);
             map.AddLocation(forest, 1, 4);
-            Cliff cliff = new Cliff("The Hanger");
+            Cliff cliff = new Cliff("Rockface");
             map.AddLocation(cliff, 1, 5);
-            Church church = new Church("Church of Stendarr");
+            Church church = new Church("Old Chapel");
             map.AddLocation(church, 3, 4);
             Swamp swamp = new Swamp("Bog");
             map.AddLocation(swamp, 4, 1);
-            Town town = new Town("Mana");
+            Town town = new Town("Skyrim");
             map.AddLocation(town, 2, 2);
             Ravine ravine = new Ravine("High pass");
             map.AddLocation(ravine, 1, 2);
-            Lake lake = new Lake("Black Lake");
+            Lake lake = new Lake("");
             map.AddLocation(lake, 0, 2);
-            Tomb tomb = new Tomb("Dunbarrow");
+            Tomb tomb = new Tomb("");
             map.AddLocation(tomb, 4, 3);
-            Road road = new Road("Road");
+            Road road = new Road("");
             map.AddLocation(road, 2, 1);
             map.AddLocation(road, 2, 0);
             map.AddLocation(road, 2, 3);
             map.AddLocation(road, 2, 4);
-            Castle castle = new Castle("Dragonstar");
+            Castle castle = new Castle("");
             map.AddLocation(castle, 1, 0);
-            CastleArmory castleArmory = new CastleArmory("Dragonstar armory");
+            CastleArmory castleArmory = new CastleArmory("");
             map.AddLocation(castleArmory, 0, 0);
-            TombHall tombHall = new TombHall("Tombhall1");
+            TombHall tombHall = new TombHall("");
             map.AddLocation(tombHall, 5, 3);
             map.AddLocation(tombHall, 8, 1);
-            TombHall1 tombHall1 = new TombHall1("Tombhall2");
+            TombHall1 tombHall1 = new TombHall1("");
             map.AddLocation(tombHall1, 7, 5);
             map.AddLocation(tombHall1, 9, 2);
-            TombHall2 tombHall2 = new TombHall2("Tombroom3");
+            TombHall2 tombHall2 = new TombHall2("");
             map.AddLocation(tombHall2, 7, 2);
             map.AddLocation(tombHall2, 9, 3);
-            TombRoom tombRoom = new TombRoom("Tombroom1");
+            TombRoom tombRoom = new TombRoom("");
             map.AddLocation(tombRoom, 6, 3);
             map.AddLocation(tombRoom, 6, 5);
             map.AddLocation(tombRoom, 6, 1);
             map.AddLocation(tombRoom, 10, 3);
-            TombRoom1 tombRoom1 = new TombRoom1("Tombroom2");
+            TombRoom1 tombRoom1 = new TombRoom1("");
             map.AddLocation(tombRoom1, 5, 4);
             map.AddLocation(tombRoom1, 7, 4);
             map.AddLocation(tombRoom1, 7, 1);
-            TombRoom2 tombRoom2 = new TombRoom2("Tombroom3");
+            TombRoom2 tombRoom2 = new TombRoom2("");
             map.AddLocation(tombRoom2, 5, 5);
             map.AddLocation(tombRoom2, 6, 2);
             map.AddLocation(tombRoom2, 9, 1);
-            TombTreasure tombTreasure = new TombTreasure("TombTreasureRoom");
+            TombTreasure tombTreasure = new TombTreasure("");
             map.AddLocation(tombTreasure, 11, 3);
-            TombTreasure1 tombTreasure1 = new TombTreasure1("TombTreasureRoom");
-            map.AddLocation(tombTreasure1, 12, 3);
+            
         }
 
         static void Start(ref Map map, ref Player player)
@@ -189,20 +187,14 @@ namespace TextAdventureCS
 
                     switch ( menuItems[choice] )
                     {
-                        case ACTION_TREASURE:                            
-                            Console.WriteLine("You return to Mana with your spoils and live a happy life");
-                            Console.WriteLine("");
-                            Console.WriteLine("Thanks for playing!");
-                            Console.WriteLine("Made by: Thom Martens, Kevin Rademacher and Bas Overvoorde");
-                            Console.ReadKey();
-                            break;
                         case ACTION_STATS:
+                            player.HasBuff(player);
                             player.ShowStats(player);
                             Console.ReadKey();
                             break;
                         
                         case ACTION_INV:
-                            player.ShowInventory();
+                            ShowInv(ref player);
                             Console.ReadKey();
                         break;
 
@@ -223,14 +215,11 @@ namespace TextAdventureCS
                         break;
 
                         case ACTION_FIGHT:
-                            // Add code for fighting here  
-                            
+                            // Add code for fighting here                            
                         break;
 
                         case ACTION_RUN:
-                        map.Run();
-                        Console.WriteLine("You run away to {0}", map.GetLocation().GetName());
-                        Console.ReadKey();
+                            // Add code for running here
                         break;
 
                         case ACTION_BOSS:
@@ -238,11 +227,12 @@ namespace TextAdventureCS
                         break;
 
                         case ACTION_INN:
-
-                        player.SetHealth();
-                        Console.WriteLine("You have been healed!");
-                        Console.ReadKey();
+                            //add inn code here
+                            player.SetHealth();
+                            Console.WriteLine("You have been healed!"); 
+                            Console.ReadKey();                   
                         break;
+                        
                     }
                 }
             } 
@@ -285,10 +275,6 @@ namespace TextAdventureCS
             {
                 menu.Add(ACTION_INN);
             }
-            if (map.GetLocation().HasTreasure())
-            {
-                menu.Add(ACTION_TREASURE);
-            }
             menu.Add(ACTION_STATS);
             menu.Add(ACTION_INV);
             menu.Add( ACTION_QUIT );
@@ -327,6 +313,11 @@ namespace TextAdventureCS
             Console.WriteLine("Thank you for playing and have a nice day!");
             Console.WriteLine("Press a key to exit...");
             Console.ReadKey();
+        }
+
+        static void ShowInv(ref Player player)
+        {
+            player.ShowInventory();
         }
     }
 }

@@ -10,12 +10,11 @@ namespace TextAdventureCS
         public Lake(string name)
             : base(name)
         {
-            hasBossEnemy = true;
+ 
         }
         public override void Description()
         {
-            Console.WriteLine("You are standing in front of a lake(Blacklake). . .");
-            Console.WriteLine("It is misty and you think you saw something moving in the water. . .");
+            Console.WriteLine("You are standing in front of a lake. . .");
         }
     }
 }

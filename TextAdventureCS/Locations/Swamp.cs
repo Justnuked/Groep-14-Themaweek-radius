@@ -10,13 +10,11 @@ namespace TextAdventureCS
         public Swamp(string name)
             : base(name)
         {
-            hasEnemy = true;
         }
 
         public override void Description()
         {
             Console.WriteLine("You are standing in a swamp.");
-            Console.WriteLine("The air is thick, and it smells terrible");
         }
     }
 }

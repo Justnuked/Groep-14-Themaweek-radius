@@ -11,9 +11,7 @@ namespace TextAdventureCS
         protected bool hasEnemy;
         protected bool hasBossEnemy;
         protected bool hasInn;
-        protected bool hasTreasure;
         protected Dictionary<string, Objects> items;
-        protected Dictionary<string, Monster> monster;
 
         public Location(string name)
         {
@@ -21,9 +19,7 @@ namespace TextAdventureCS
             hasEnemy = false;
             hasBossEnemy = false;
             hasInn = false;
-            hasTreasure = false;
             items = new Dictionary<string, Objects>();
-            monster = new Dictionary<string, Monster>();
         }
 
         abstract public void Description();
@@ -36,11 +32,6 @@ namespace TextAdventureCS
         public virtual bool HasEnemy()
         {
             return hasEnemy;
-        }
-
-        public virtual bool HasTreasure()
-        {
-            return hasTreasure;
         }
 
         public virtual bool HasBossEnemy()
@@ -65,11 +56,5 @@ namespace TextAdventureCS
         {
             return items;
         }
-
-        public Dictionary<string, Monster> GetMonsters()
-        {
-            return monster;
-        }
-    
     }
 }

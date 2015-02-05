@@ -22,6 +22,5 @@ C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAd
 C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
 C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAdventureCS.exe
 C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
-C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
 C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
 C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb

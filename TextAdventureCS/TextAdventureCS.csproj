@@ -51,6 +51,7 @@
     <Compile Include="Items\Health Potion_Weak.cs" />
     <Compile Include="Items\Item_Diamond.cs" />
     <Compile Include="Items\Item_Key.cs" />
+    <Compile Include="Items\Item_Pickaxe.cs" />
     <Compile Include="Items\Item_Rope.cs" />
     <Compile Include="Items\Weapon_Axe.cs" />
     <Compile Include="Items\Weapon_Dagger.cs" />
@@ -73,11 +74,8 @@
     <Compile Include="Locations\Tomb_Locations\TombRoom1.cs" />
     <Compile Include="Locations\Tomb_Locations\TombRoom2.cs" />
     <Compile Include="Locations\Tomb_Locations\TombTreasure.cs" />
-    <Compile Include="Locations\Tomb_Locations\TombTreasure1.cs" />
     <Compile Include="Locations\Town.cs" />
     <Compile Include="Map.cs" />
-    <Compile Include="Monster.cs" />
-    <Compile Include="Monsters\Bandit.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

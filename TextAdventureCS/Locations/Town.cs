@@ -11,6 +11,8 @@ namespace TextAdventureCS
             : base(name)
         {
             hasInn = true;
+            Dagger dag = new Dagger("Dagger", true);
+            items.Add(dag.GetName(), dag);
         }
 
         public override void Description()

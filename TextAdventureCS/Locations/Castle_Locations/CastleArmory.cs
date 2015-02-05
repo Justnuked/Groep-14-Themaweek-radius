@@ -10,12 +10,12 @@ namespace TextAdventureCS
         public CastleArmory(string name)
             : base(name)
         {
-            hasBossEnemy = true;
+            Key key = new Key("Key", true);
+            items.Add(key.GetName(), key);
         }
         public override void Description()
         {
-            Console.WriteLine("You are standing in the middle of a armory.");
-            Console.WriteLine("You see several weaponracks on the wall, on the other side are some armourstands. . .");
+            Console.WriteLine("You are standing in the middle of a gaint, ill lit room.");
         }
     }
 }

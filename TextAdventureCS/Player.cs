@@ -9,8 +9,8 @@ namespace TextAdventureCS
     {
         private Dictionary<string, Objects> inventory;
 
-        public Player(string name, int maxHealth)
-            : base(name, maxHealth)
+        public Player(string name, int maxHealth, int str, int armour)
+            : base(name, maxHealth, str, armour)
         {
             inventory = new Dictionary<string, Objects>();
         }
@@ -28,7 +28,7 @@ namespace TextAdventureCS
             {
                 inventory.Remove(itemName);
                 Console.WriteLine("{0} is removed from your inventory",itemName);
-                ShowInventory();
+                //ShowInventory();
                 Console.WriteLine("Press a key to continue..");
                 Console.ReadKey();
             }
@@ -70,6 +70,12 @@ namespace TextAdventureCS
                 return false;
         }
 
+        //added this to make you stronger or thougher if you have a certain item.
+        public override int HasBuff(int str)
+        {
+            return str = 1;
+        }
+
         public override void TakeHit( int damage )
         {
             if (health - damage < 0)
@@ -79,7 +85,7 @@ namespace TextAdventureCS
                 Console.WriteLine("As you move towards the light, the last thing going through");
                 Console.WriteLine("your mind is: 'This was a great adventure. Too bad it had");
                 Console.WriteLine("to end like this.' And then it is all over...");
-                Console.WriteLine("Press a key to continu...");
+                Console.WriteLine("Press a key to continue...");
                 Console.ReadKey();
             }
             else

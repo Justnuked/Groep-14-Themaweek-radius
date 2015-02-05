@@ -10,7 +10,7 @@ namespace TextAdventureCS
         public TombRoom(string name)
             : base(name)
         {
-            hasEnemy = true;
+
         }
         public override void Description()
         {

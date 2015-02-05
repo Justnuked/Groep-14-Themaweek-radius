@@ -14,9 +14,7 @@ namespace TextAdventureCS
         }
         public override void Description()
         {
-            Console.WriteLine("You are standing in the middle of a gaint room.");
-            Console.WriteLine("The walls are made out of gold, there is a marble throne encrusted with rare gems");
-            Console.WriteLine("Against the walls are piles of golden coins, on the side of the throne you see a big chest. . .");
+            Console.WriteLine("You are standing in the middle of a gaint, ill lit room.");
         }
     }
 }

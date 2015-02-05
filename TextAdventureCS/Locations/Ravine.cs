@@ -10,11 +10,12 @@ namespace TextAdventureCS
         public Ravine(string name)
             : base(name)
         {
+            hasBossEnemy = true;
+            hasEnemy = true;
         }
         public override void Description()
         {
             Console.WriteLine("You are standing on the edge of a ravine.");
-            Console.WriteLine("You can not cross here at the moment");
         }
     }
 }
