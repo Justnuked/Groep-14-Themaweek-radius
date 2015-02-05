@@ -1,0 +1,27 @@
+C:\Users\Sietse\Documents\Visual Studio 2010\Projects\TextAdventureCS\TextAdventureCS\bin\Debug\TextAdventureCS.exe
+C:\Users\Sietse\Documents\Visual Studio 2010\Projects\TextAdventureCS\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
+C:\Users\Sietse\Documents\Visual Studio 2010\Projects\TextAdventureCS\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Sietse\Documents\Visual Studio 2010\Projects\TextAdventureCS\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb
+C:\Users\Sietse\Documents\Visual Studio 2010\Projects\TextAdventureCS\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Workstation\Desktop\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Workstation\Desktop\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb
+C:\Users\Workstation\Desktop\TextAdventureCS\bin\Debug\TextAdventureCS.exe
+C:\Users\Workstation\Desktop\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
+C:\Users\Workstation\Desktop\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Sietse\Documents\Visual Studio 2013\Projects\TextAdventureCS_aanpassingen_alex_michiel\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Sietse\Documents\Visual Studio 2013\Projects\TextAdventureCS_aanpassingen_alex_michiel\obj\x86\Debug\TextAdventureCS.pdb
+C:\Users\Sietse\Documents\Visual Studio 2013\Projects\TextAdventureCS_aanpassingen_alex_michiel\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Sietse\Documents\Visual Studio 2013\Projects\TextAdventureCS_aanpassingen_alex_michiel\bin\Debug\TextAdventureCS.exe
+C:\Users\Sietse\Documents\Visual Studio 2013\Projects\TextAdventureCS_aanpassingen_alex_michiel\bin\Debug\TextAdventureCS.pdb
+C:\Users\Thom\Desktop\themaweek\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Thom\Desktop\themaweek\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb
+C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb
+C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAdventureCS.exe
+C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
+C:\Users\Thom\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAdventureCS.exe
+C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
+C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Kevin\Documents\GitHub\themaweek-radius\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb
