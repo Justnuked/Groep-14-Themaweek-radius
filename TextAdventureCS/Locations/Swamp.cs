@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Swamp(string name)
             : base(name)
         {
+            Rope rope = new Rope("Rope", true);
+            items.Add(rope.GetName(), rope);
             hasEnemy = true;
         }
 

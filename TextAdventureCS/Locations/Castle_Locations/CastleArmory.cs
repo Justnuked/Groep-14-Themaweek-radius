@@ -13,6 +13,10 @@ namespace TextAdventureCS
             hasBossEnemy = true;
             Key key = new Key("Key", true);
             items.Add(key.GetName(), key);
+            Armour_Iron ia = new Armour_Iron("Iron Armour", true);
+            items.Add(ia.GetName(), ia);
+            Strong_Health_Potion sh = new Strong_Health_Potion("Strong Health Potion", true);
+            items.Add(sh.GetName(), sh);
         }
         public override void Description()
         {

@@ -28,7 +28,7 @@ namespace TextAdventureCS
             {
                 inventory.Remove(itemName);
                 Console.WriteLine("{0} is removed from your inventory",itemName);
-                ShowInventory();
+                //ShowInventory();
                 Console.WriteLine("Press a key to continue..");
                 Console.ReadKey();
             }
@@ -70,27 +70,29 @@ namespace TextAdventureCS
                 return false;
         }
 
-        public override int HasBuff(int str)
-        {
-            return str = 1;
-        }
-
         public override void TakeHit( int damage )
         {
+            if (damage < 0)
+            {
+                damage = 1;
+            }
             if (health - damage < 0)
             {
                 Console.Clear();
                 Console.WriteLine("You took too much damage. You fall to the ground.");
-                Console.WriteLine("As you move towards the light, the last thing going through");
-                Console.WriteLine("your mind is: 'This was a great adventure. Too bad it had");
-                Console.WriteLine("to end like this.' And then it is all over...");
-                Console.WriteLine("Press a key to continu...");
+                Console.WriteLine("As you feel the cold floor below you, you realise your greediness");
+                Console.WriteLine("is the cause of your oncoming death. It is only a matter of time now.");
+                Console.WriteLine("The treasure shall remain where it has been since the death of its owner.");
+                Console.WriteLine("Locked away, waiting for someome to come and grab it.");
+                Console.WriteLine("Sadly, that someone will not be you. At least not in this lifetime.");
+                Console.WriteLine("Better luck next time!");
                 Console.ReadKey();
+                System.Environment.Exit(0);
             }
             else
             {
                 health -= damage;
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("You took {0} points of damage.", damage);
                 Console.WriteLine("You now have {0} HP left.", health);
 
@@ -109,9 +111,20 @@ namespace TextAdventureCS
                 {
                     Console.WriteLine("You have a few scratches, nothing to worry about yet.");
                 }
-                Console.WriteLine("Press a key to continue");
+               // Console.WriteLine("Press a key to continue");
+
                 Console.ReadKey();
             }
+        }
+
+        public override int HasStrBuff(int str)
+        {
+            return str;
+        }
+
+        public override int HasArmBuff(int armour)
+        {
+            return armour;
         }
     }
 }

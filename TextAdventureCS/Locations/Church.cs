@@ -10,9 +10,11 @@ namespace TextAdventureCS
         public Church(string name)
             : base(name)
         {
+            Sword sword = new Sword("Sword", true);
+            Weak_Health_Potion wh = new Weak_Health_Potion("Weak Health Potion", true);
+            items.Add(sword.GetName(), sword);
+            items.Add(wh.GetName(), wh);
             hasEnemy = true;
-            Item_Pickaxe pick = new Item_Pickaxe("Pickaxe", true);
-            items.Add(pick.GetName(), pick);
         }
 
         public override void Description()

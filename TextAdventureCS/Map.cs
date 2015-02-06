@@ -10,7 +10,7 @@ namespace TextAdventureCS
         private int height;
         private int width;
         private Location[,] map;
-
+        
         private Position pos;
         private Directions directions;
         private Player player;
@@ -34,6 +34,7 @@ namespace TextAdventureCS
             this.width = width;
             this.height = height;
             this.player = player;
+
 
             map = new Location[this.width, this.height];
             directions = new Directions();
@@ -136,6 +137,13 @@ namespace TextAdventureCS
 
             if (pos.Yposition == 3 && pos.Xposition == 4)
                 pos.Yposition -= 2;
+
+            //else
+            //    Console.WriteLine("Cant run!");
+        }
+        public Location GetLocation()
+        {
+            return map[pos.Yposition, pos.Xposition];
         }
 
         public void AllowedDirections()
@@ -197,13 +205,22 @@ namespace TextAdventureCS
                     Console.WriteLine("You need some kind of tool to destroy it.");
                 }
             }
+            // cliff needs rope
+            if (pos.Yposition == 1 && pos.Xposition == 2)
+            {
+                directions.south = -1;
+                if (player.HasObject("Rope") == true)
+                {
+                    Console.WriteLine("You tie the rope to a rock. You can now climb down.");
+                    directions.south = +1;
+                }
+                else
+                {
+                    Console.WriteLine("The cliff is too high to jump down.");
+                    Console.WriteLine("You need something in order to safely rappel down.");
+                }
+            }
         }
-
-        public Location GetLocation()
-        {
-            return map[pos.Yposition,pos.Xposition];            
-        }
-
         public int GetNorth()
         {
             return directions.north;

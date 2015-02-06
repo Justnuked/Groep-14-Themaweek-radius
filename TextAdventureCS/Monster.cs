@@ -10,22 +10,16 @@ namespace TextAdventureCS
         public string name;
         public int str;
         public int though;
+        public int health;
+        public int maxhealth;
 
-        public Monster(string name)
+        public Monster(string name, int maxHealth, int health)
         {
+            this.maxhealth = maxHealth;
+            this.health = health;
             this.str = 1;
             this.though = 1;
             this.name = name;
-        }
-
-        public int GetStr()
-        {
-            return str;
-        }
-
-        public int GetThough()
-        {
-            return though;
         }
 
         public string GetName()

@@ -14,7 +14,7 @@ namespace TextAdventureCS
         public override void Description()
         {
             Console.WriteLine("You are standing on the edge of a ravine.");
-            Console.WriteLine("You can not cross here at the moment");
+            Console.WriteLine("You see a lake at the bottom");
         }
     }
 }

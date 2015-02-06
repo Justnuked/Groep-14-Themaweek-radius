@@ -10,7 +10,6 @@ namespace TextAdventureCS
         public Road(string name)
             : base(name)
         {
- 
         }
         public override void Description()
         {

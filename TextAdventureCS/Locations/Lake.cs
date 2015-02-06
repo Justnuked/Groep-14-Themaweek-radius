@@ -11,6 +11,12 @@ namespace TextAdventureCS
             : base(name)
         {
             hasBossEnemy = true;
+            Strong_Health_Potion shp = new Strong_Health_Potion("Strong Health Potion", true);
+            items.Add(shp.GetName(), shp);
+            Weak_Health_Potion whp = new Weak_Health_Potion("Weak Health Potion", true);
+            items.Add(whp.GetName(), whp);
+            Axe axe = new Axe("Axe", true);
+            items.Add(axe.GetName(), axe);
         }
         public override void Description()
         {

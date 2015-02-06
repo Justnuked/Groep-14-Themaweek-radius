@@ -5,20 +5,19 @@ using System.Text;
 
 namespace TextAdventureCS
 {
-   public class Bandit : Monster
+    class Troll : Monster
     {
-        public Bandit(string Name)
-            :base(Name,15,15)
+            public Troll(string Name)
+            :base(Name,25,25)
         {
-            this.str = 12;
+            this.str = 10;
             this.though = 5;
-            this.name = "Bandit";
+            this.name = "Troll";
         }
-
 
         public string Description()
         {
-            return "A vicious bandit wielding a short sword!";
+            return "A giant cave troll with a huge club, he smells terrible!";
         }
 
         public int GetStr()
@@ -30,6 +29,5 @@ namespace TextAdventureCS
         {
             return though;
         }
-
     }
 }

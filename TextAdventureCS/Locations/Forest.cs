@@ -10,14 +10,8 @@ namespace TextAdventureCS
         public Forest(string name)
             : base(name)
         {
-            // Add items here
-            Diamond dia = new Diamond("Diamond", true);
-            items.Add(dia.GetName(), dia);
             // If there is an enemy, set enemy to true
-            hasEnemy = true;
-            Monster monster = new Monster("Bandit");
-            
-            
+            hasEnemy = true;              
         }
 
         public override void Description()

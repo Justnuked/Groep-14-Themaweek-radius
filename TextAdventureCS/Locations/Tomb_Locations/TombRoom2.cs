@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public TombRoom2(string name)
             : base(name)
         {
+            Strong_Health_Potion sp = new Strong_Health_Potion("Strong Health Potion", true);
+            items.Add(sp.GetName(), sp);
             hasEnemy = true;
         }
         public override void Description()

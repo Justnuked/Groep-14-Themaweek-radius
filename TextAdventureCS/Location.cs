@@ -8,8 +8,8 @@ namespace TextAdventureCS
     abstract class Location
     {
         protected string name;
-        protected bool hasEnemy;
-        protected bool hasBossEnemy;
+        public bool hasEnemy;
+        public bool hasBossEnemy;
         protected bool hasInn;
         protected bool hasTreasure;
         protected Dictionary<string, Objects> items;

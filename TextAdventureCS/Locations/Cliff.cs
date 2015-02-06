@@ -10,6 +10,10 @@ namespace TextAdventureCS
         public Cliff(string name)
             : base(name)
         {
+            Item_Pickaxe pick = new Item_Pickaxe("Pickaxe", true);
+            Armour_Leather la = new Armour_Leather("Leather Armour", true);
+            items.Add(la.GetName(), la); 
+            items.Add(pick.GetName(), pick);
             hasEnemy = true;
         }
 
